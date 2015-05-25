@@ -7,10 +7,10 @@ DHT series sensor use a single wire communication protocol similar to well-knows
 
 # Usage
 
-*echo <timer> <gpio> [PID] > /sys/kernel/debug/irq-dht*
+*echo &lt;timer&gt; &lt;gpio&gt; [PID] &gt; /sys/kernel/debug/irq-dht*
 
-*timer* — hardware timer to use, 0 to 3. Timer should not be used by another application or driver.
+*timer* â€”Â hardware timer to use, 0 to 3. Timer should not be used by another application or driver.
 
-*gpio* — GPIO number where DHT sensor is connected.
+*gpio* â€”Â GPIO number where DHT sensor is connected.
 
-*PID* — process ID to send the signal containing DHT data to. If no PID is given, data will be printed to console in readable form. Signal sends data as a single 32-bit integer, high word (16 bits) is humdity, low word is temperature in Celsius, multiplied by 10.
+*PID* â€”Â process ID to send the signal containing DHT data to. If no PID is given, data will be printed to console in readable form. Signal sends data as a single 32-bit integer, high word (16 bits) is humdity, low word is temperature in Celsius, multiplied by 10.
