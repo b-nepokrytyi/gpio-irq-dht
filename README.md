@@ -1,7 +1,7 @@
 # gpio-irq-dht
 DHT11/DHT22 temperature and humidity sensor protocol handler for AR9331
 
-DHT series sensor use a single wire communication protocol similar to well-knows 1-Wire protocol, but without synchronization pulses from host. After intitial start sequence initiated by host, sensor automatically sends 5 bytes of data, where "0" is coded with 26-28us pulse and "1" is coded with 70us pulse. With such timings, protocal can not be handled in userspace or without GPIO IRQ support and precise timers.
+DHT series sensor use a single wire communication protocol similar to well-knows 1-Wire protocol, but without synchronization pulses from host. After intitial start sequence initiated by host, sensor automatically sends 5 bytes of data, where "0" is coded with 26-28us pulse and "1" is coded with 70us pulse. With such timings, protocol can not be handled in userspace or without GPIO IRQ support and precise timers.
 
 *gpio-irq-dht* kernel module provides support for DHT11/DHT22 protocol for OpenWRT 14.07 "Barrier Breaker" with 3.10 Linux kernel, running on AR9331 SoC. Module is not portable as it uses AR9331's IRQ abilities and hardware timer. Module requires <a href="https://github.com/GBert/openwrt-misc/tree/master/gpio-test/src/patches-3.14">728-MIPS-ath79-add-gpio-irq.patch</a> kernel patch to be applied.
 
