@@ -7,7 +7,7 @@ DHT series sensor use a single wire communication protocol similar to well-knows
 
 # Usage
 
-*echo &lt;timer&gt; &lt;gpio&gt; [PID] &gt; /sys/kernel/debug/irq-dht*
+*echo "&lt;timer&gt; &lt;gpio&gt; [PID]" &gt; /sys/kernel/debug/irq-dht*
 
 *timer* — hardware timer to use, 0 to 3. Timer should not be used by another application or driver.
 
