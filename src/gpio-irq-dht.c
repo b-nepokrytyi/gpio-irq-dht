@@ -105,7 +105,7 @@ typedef struct
 {
 	int				timer;
 	int				irq;
-	unsigned int	timeout;			//	allways microseconds
+	unsigned int	timeout;			//	always microseconds
 } _timer_handler;
 
 static _timer_handler	_thandler;
