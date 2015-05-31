@@ -15,4 +15,4 @@ DHT series sensor use a single wire communication protocol similar to well-knows
 
 *gpio* — GPIO number where DHT sensor is connected.
 
-*PID* — process ID to send the signal containing DHT data to. If no PID is given, data will be sent to kernel log in readable form. Signal sends data as a single 32-bit integer, high word (16 bits) is humdity, low word is temperature in Celsius, multiplied by 10.
+*PID* — process ID to send the signal containing DHT data to. If no PID is given, data will be sent to kernel log in readable form. Signal sends data as a single 32-bit integer, high word (16 bits) is humdity, low word is temperature in Celsius, multiplied by 10. "0" means error.
